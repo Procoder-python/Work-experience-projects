@@ -17,6 +17,7 @@ header("Pragma: no-cache");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
+    <link rel="stylesheet" href="styling.css">
 </head>
 <body>
     <h2>Welcome!</h2>

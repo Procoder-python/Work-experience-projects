@@ -54,24 +54,29 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="styling.css">
 </head>
 <body>
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         
-        <h2>Login</h2>
+        <div class="brand-name">FAKEBOOK</div>
+        <h2>Welcome back</h2>
+        <p class="form-intro">Sign in to continue.</p>
 
         <!-- Display error messages if local validation fails -->
         <?php if (!empty($error_message)): ?>
-            <p style="color: red;"><?php echo $error_message; ?></p>
+            <p class="form-message"><?php echo $error_message; ?></p>
         <?php endif; ?>
 
-        username:<br>
-        <input type="text" name="username" required><br>
-        password:<br>
-        <input type="password" name="password" required><br>
+        <label for="username">Username</label>
+        <input id="username" type="text" name="username" required>
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" required>
         <input type="submit" name="submit" value="Login">
+        <div class="form-switch">or <a href="index.php">Register</a></div>
     </form>
+
     
 </body>
 </html>
